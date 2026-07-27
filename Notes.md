@@ -10,67 +10,35 @@ Each topic includes:
 I write these notes for future revision and interview preparation.
 
 # MySQL Notes
+__________________________________________________________________________
 
----
+Day-1:
+What is Database?
+-- Database is a way of storing data in a format which makes it easily accessible.
 
-# Logging into MySQL
+What is a Query?
+-- A Query is a command given to the database inorder to interact with it. It follows a syntax.
 
-## Normal User
+What is CRUD?
+-- CRUD stands for Create, Read, Update and Delete. They are 4 primary operations performed on a Database
 
-```bash
-mysql -u saad -p
-```
+What is DBMS?
+-- Database Managements System is a software used to manage the data stored in database. For example MySQL, PostgreSQL, MicrosoftSQL
 
-Purpose
+____________________________________________________________________________________________
+Day 2:
+To check for databases: SHOW DATABASE;
+To change database: USE DATABASE_NAME;
+To see tables: SHOW TABLES;
+To see the tables content: DESCRIBE TABLE_NAME;
+Creating a Table: 
 
-- Used for learning MySQL.
-- Used for projects.
-- Used every day.
+CREATE TABLE USER (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(100) NOT NULL,
+    EMAIL VARCHAR(100) NOT NULL UNIQUE,
+    GENDER ENUM('MALE', 'FEMALE', 'NOGENDER') NOT NULL,
+    DATE_OF_BIRTH DATE,
+    CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
----
-
-## Root User
-
-```bash
-sudo mysql
-```
-
-Purpose
-
-- Used for administration.
-- Create users.
-- Reset passwords.
-- Grant permissions.
-
----
-
-## systemctl
-
-Check status
-
-```bash
-sudo systemctl status mysql
-```
-
-Start MySQL
-
-```bash
-sudo systemctl start mysql
-```
-
-Stop MySQL
-
-```bash
-sudo systemctl stop mysql
-```
-
-Restart MySQL
-
-```bash
-sudo systemctl restart mysql
-```
-
-My Notes
-
-- mysql = connect to database
-- systemctl = controls the MySQL server
