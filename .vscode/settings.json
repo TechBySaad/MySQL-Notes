@@ -11,7 +11,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "Local MySQL",
-            "database": "LEARNING",
+            "database": "learning",
             "username": "saad",
             "password": "SAADheroOfMySQL@26"
         }

@@ -42,3 +42,28 @@ CREATE TABLE USER (
     CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+____________________________________________________________________________________________
+Day 3:
+
+To drop the database(delete):
+-- DROP DATABASE database_name;
+
+
+Datatypes and Constraints:
+
+Datatypes: 
+-- INT: It is used to take integers, whole numbers
+-- VARCHAR(Limit of characters): Used to store variable length string upto character limit.
+-- ENUM: A String object with a value choosen from a list of permitted values.
+         Example: gender ENUM('Male', 'Female'), user must enter the any one option present.
+-- DATE: Used to store date data
+-- TIMESTAMP: Stores Data and Time, automatically set to current timestamp when a row is     created.
+-- BOOLEAN: Stores TRUE or False values.
+
+Constraints:
+-- AUTO_INCREMENT: Automatically generates a unique number for each row.
+-- PRIMARY KEY: Uniquely identfies each row in the table. It cannot be duplicate.
+-- NOT NULL: Ensures a Column cannot have NULL values.
+-- UNIQUE: Ensures all values in column are unique.
+-- DEFAULT: Set a defualt value for a column if no value is provided. 
+
