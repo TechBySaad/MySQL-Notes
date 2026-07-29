@@ -27,19 +27,21 @@ What is DBMS?
 
 ____________________________________________________________________________________________
 Day 2:
-To check for databases: SHOW DATABASE;
-To change database: USE DATABASE_NAME;
+To check for already created/present databases: SHOW DATABASE;
+To create database: CREATE DATABASE database_name;
+To change database: USE database_name;
 To see tables: SHOW TABLES;
-To see the tables content: DESCRIBE TABLE_NAME;
+To see the tables content: DESCRIBE table_name;
+
 Creating a Table: 
 
-CREATE TABLE USER (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    NAME VARCHAR(100) NOT NULL,
-    EMAIL VARCHAR(100) NOT NULL UNIQUE,
-    GENDER ENUM('MALE', 'FEMALE', 'NOGENDER') NOT NULL,
-    DATE_OF_BIRTH DATE,
-    CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    gender ENUM('MALE', 'FEMALE', 'NOGENDER') NOT NULL,
+    date_of_birth DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 ____________________________________________________________________________________________
@@ -67,3 +69,21 @@ Constraints:
 -- UNIQUE: Ensures all values in column are unique.
 -- DEFAULT: Set a defualt value for a column if no value is provided. 
 
+
+____________________________________________________________________________________________
+Day 4:
+
+Rename table name:
+-- RENAME TABLE present_name to new_name;
+
+Altering a table:
+-- ALTER TABLE table_name ADD COLUMN new_column_name [data_type] [constraints];
+
+To delete any column:
+ALTER TABLE table_name DROP COLUMN column_name;
+
+To modify a column:
+ALTER TABLE table_name MODIFY COLUMN column_name (Alteration);
+
+To change the order of the column in the table: 
+ALTER TABLE table_name MODIFY COLUMN column_name AFTER/BEFORE/FIRST  
