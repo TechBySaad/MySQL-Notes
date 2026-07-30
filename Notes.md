@@ -86,4 +86,27 @@ To modify a column:
 ALTER TABLE table_name MODIFY COLUMN column_name (Alteration);
 
 To change the order of the column in the table: 
-ALTER TABLE table_name MODIFY COLUMN column_name AFTER/BEFORE/FIRST  
+ALTER TABLE table_name MODIFY COLUMN column_name AFTER/BEFORE/FIRST
+
+____________________________________________________________________________________________
+Day 5:
+
+How to insert data into the table:
+-- INSERT INTO table_name VALUES
+('values','...',...);
+
+To fill only selected columns:
+-- INSERT INTO table_name (column names) VALUES
+('values','...',...);
+
+To insert multiple values:
+-- INSERT INTO table_name VALUES
+('values','...',...),
+('values','...',...),
+('values','...',...)
+.
+.
+.;
+
+Querying a data:
+-- 
