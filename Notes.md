@@ -86,7 +86,10 @@ To modify a column:
 ALTER TABLE table_name MODIFY COLUMN column_name (Alteration);
 
 To change the order of the column in the table: 
-ALTER TABLE table_name MODIFY COLUMN column_name AFTER/BEFORE/FIRST
+ALTER TABLE table_name MODIFY COLUMN column_name data_type AFTER column_name
+
+TO rename a column name:
+ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
 
 ____________________________________________________________________________________________
 Day 5:
@@ -108,5 +111,33 @@ To insert multiple values:
 .
 .;
 
-Querying a data:
--- 
+____________________________________________________________________________________________
+Day 6:
+
+How to retrive selected column data from table:
+-- select column1, column2 from table_name;
+
+Where clause:
+-- select * from table_name where [condition];
+-- select * from table_name where column_name is null/not null; // shows null values
+-- select * from table_name where column_name between 'value1' and 'value2'; // shows the values beween two values.
+-- select * from table_name in ('value', 'value'); // shows the selected values
+
+AND and OR:
+-- select * from table_name where gender = 'Male' and salary = '5000'; // returns the values
+-- select * from table_name where gender = 'Female' or salary > '2000'; 
+
+____________________________________________________________________________________________
+Day 7:
+
+Order by:
+-- select * from table_name where salary > '4000' order by asc/dec;
+
+To limit rows:
+-- select * from table_name where salary > '4000' order by asc/desc limit by 5;
+
+Pattern Matching:
+Like:
+-- select * from table_name where name like 'A%'; // name starts with A
+-- select * from table_name where name like '%a'; // ends with a
+-- select * from table_name where name like '%am%'; // has am in it.
