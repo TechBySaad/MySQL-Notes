@@ -91,6 +91,7 @@ ALTER TABLE table_name MODIFY COLUMN column_name data_type AFTER column_name
 TO rename a column name:
 ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
 
+
 ____________________________________________________________________________________________
 Day 5:
 
@@ -141,3 +142,17 @@ Like:
 -- select * from table_name where name like 'A%'; // name starts with A
 -- select * from table_name where name like '%a'; // ends with a
 -- select * from table_name where name like '%am%'; // has am in it.
+
+____________________________________________________________________________________________
+Day 8:
+
+How to Update data in the table:
+-- update table_name set column1 - value1 where (condition);
+
+To delete the data:
+-- delete from table_name where (condition)
+
+To delete the table:
+-- drop table table_name
+
+
