@@ -156,3 +156,11 @@ To delete the table:
 -- drop table table_name
 
 
+____________________________________________________________________________________________
+Day 9:
+
+How to add a constraint to a column of a table?
+-- alter table table_name add constraint constraint_name unique (column_name);
+
+How to add Check constraint
+-- alter table table_name add constraint check_dob check (date_of_birth > '1950-01-01'); // will not add users who were born before that date
